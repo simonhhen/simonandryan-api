@@ -9,6 +9,7 @@ exports.list_all_items = (req, res) => {
   });
 };
 exports.create_a_item = (req, res) => {
+  console.log(req.body);
   let new_item = new Item(req.body);
   console.log(new_item);
   console.log(req.body);
@@ -26,6 +27,7 @@ exports.read_a_item = (req, res) => {
   });
 };
 exports.update_a_item = (req, res) => {
+  console.log(req.body);
  Item.findOneAndUpdate({_id: req.params.itemId}, req.body, {new: true}, (err, task) => {
     console.log(task);
     if (err)
