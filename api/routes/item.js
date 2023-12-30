@@ -7,5 +7,6 @@ module.exports = (app) => {
   app.route('/items/:itemId')
     .get(itemList.read_a_item)
     .put(itemList.update_a_item)
-    .delete(itemList.delete_a_item);
+    .delete(itemList.delete_all_items);
+    
 };
