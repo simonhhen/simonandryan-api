@@ -22,5 +22,8 @@ const ItemSchema = new Schema({
     type: Number,
     default: 0
   },
+  url: {
+    type: String,
+  },
 });
 module.exports = mongoose.model('Items', ItemSchema);
